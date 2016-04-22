@@ -1,8 +1,8 @@
 from math import sqrt
+from functools import reduce
 
 def factors(n):    
-    return set(reduce(list.__add__, 
-                ([i, n/i] for i in range(1, int(sqrt(n)) + 1) if n % i == 0)))
+    return set(reduce(list.__add__,([i, n/i] for i in range(1, int(sqrt(n)) + 1) if n % i == 0)))
 
 ###### http://stackoverflow.com/a/6800214 ######
 #This will return all of the factors, very quickly, of a number n.
@@ -24,7 +24,6 @@ factorsOfNum1 = sorted(list(factors(number)))
 tempArray = sorted(list(factors(number)))
 
 for factor in tempArray:
-	if len(list(factors(factor))) > 2:
-		factorsOfNum1.remove(factor)
+	if len(list(factors(factor))) > 2:factorsOfNum1.remove(factor)
 
 print(factorsOfNum1[len(factorsOfNum1)-1])

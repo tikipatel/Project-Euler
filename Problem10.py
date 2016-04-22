@@ -1,4 +1,5 @@
 import numpy
+import sievePrimes
 
 def sievePrimes(maximum):
     primes = dict.fromkeys(range(3,maximum+1,2),True)

@@ -1,4 +1,5 @@
 import time
+import sievePrimes
 
 def is_prime(n):
     if n <= 3:

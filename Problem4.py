@@ -17,4 +17,4 @@ start = time.time()
 L = find_max_palindrome()
 elapsed = (time.time() - start)
  
-print "%s found in %s seconds" % (L,elapsed)
+print("%s found in %s seconds" % (L,elapsed))
